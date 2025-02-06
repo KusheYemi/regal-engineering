@@ -26,14 +26,16 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-100">
+    <section id="services" className="py-20 bg-muted">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-8">Our Services</h2>
+        <h2 className="text-3xl font-bold font-heading text-center mb-8">
+          Our Services
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
-            <Card key={index}>
+            <Card key={index} className="border-t-4 border-secondary">
               <CardHeader>
-                <CardTitle>{service.title}</CardTitle>
+                <CardTitle className="font-heading">{service.title}</CardTitle>
                 <CardDescription>{service.description}</CardDescription>
               </CardHeader>
             </Card>

@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Card,
@@ -39,7 +37,6 @@ export default function TeamPage() {
 
   return (
     <>
-      <Header />
       <main className="min-h-screen py-20">
         <div className="container mx-auto px-6">
           <h1 className="text-4xl font-bold text-center mb-12">Our Team</h1>
@@ -69,7 +66,6 @@ export default function TeamPage() {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   );
 }

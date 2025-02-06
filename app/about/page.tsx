@@ -1,23 +1,21 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
     <>
-      <Header />
       <main className="min-h-screen py-20">
         <div className="container mx-auto px-6">
           <h1 className="text-4xl font-bold text-center mb-12">
             About EngiTech Solutions
           </h1>
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="md:w-1/2">
-              <img
-                src="/placeholder.svg?height=400&width=600"
-                alt="About EngiTech Solutions"
-                className="rounded-lg shadow-lg"
-              />
-            </div>
+            <Image
+              src="/images/about.jpg"
+              alt="About EngiTech Solutions"
+              width={600}
+              height={400}
+              className="rounded-lg shadow-lg"
+            />
             <div className="md:w-1/2">
               <p className="text-gray-600 mb-4">
                 EngiTech Solutions is a cutting-edge engineering start-up
@@ -47,7 +45,6 @@ export default function AboutPage() {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   );
 }

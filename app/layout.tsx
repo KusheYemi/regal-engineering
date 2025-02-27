@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import type React from "react";
+import ClientToaster from "@/components/clientToaster"; // Import the new client component
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -18,8 +19,8 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "EngiTech Solutions",
-  description: "Innovative Engineering Solutions for the Future",
+  title: "Regal Engineering & Design Solutions",
+  description: "Precision. Innovation. Shaping Visions into Reality.",
 };
 
 export default function RootLayout({
@@ -29,10 +30,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${montserrat.variable} ${roboto.variable} font-sans`}>
+      <body
+        suppressHydrationWarning
+        className={`${montserrat.variable} ${roboto.variable} font-sans`}
+      >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
           {children}
+          <ClientToaster /> {/* Render the client component here */}
           <Footer />
         </ThemeProvider>
       </body>

@@ -1,49 +1,126 @@
-import Image from "next/image";
+import Link from "next/link";
+import { Facebook, Linkedin, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground py-8">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0">
-            <h3 className="text-xl font-bold">EngiTech Solutions</h3>
-            <p className="text-sm">
-              Innovative Engineering for a Better Future
+    <footer className="bg-black text-white">
+      {/* Main Footer Content */}
+      <div className="container mx-auto px-6 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="space-y-4">
+            <Link href="/" className="block">
+              <h3 className="text-xl font-bold text-yellow-500">
+                Regal Engineering
+              </h3>
+              <span className="text-sm text-gray-400">& Design Solutions</span>
+            </Link>
+            <p className="text-sm text-gray-400 pr-4">
+              Precision. Innovation. Shaping Visions into Reality.
             </p>
           </div>
-          <div className="flex space-x-4">
-            <a href="#" className="hover:text-secondary" title="X">
-              <Image
-                src="/socials/x.jpg"
-                alt="X"
-                className="h-6 w-6"
-                width={24}
-                height={24}
-              />
-            </a>
-            <a href="#" className="hover:text-secondary" title="Facebook">
-              <Image
-                src="/socials/Facebook.png"
-                alt="Facebook"
-                className="h-6 w-6"
-                width={24}
-                height={24}
-              />
-            </a>
-            <a href="#" className="hover:text-secondary" title="LinkedIn">
-              <Image
-                src="/socials/linkedin.png"
-                alt="LinkedIn"
-                className="h-6 w-6"
-                width={24}
-                height={24}
-              />
-            </a>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-yellow-500">
+              Quick Links
+            </h4>
+            <ul className="space-y-2">
+              {["About", "Services", "Team", "Contact"].map((item) => (
+                <li key={item}>
+                  <Link
+                    href={`/${item.toLowerCase()}`}
+                    className="text-sm text-gray-400 hover:text-yellow-500 transition-colors"
+                  >
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-yellow-500">
+              Services
+            </h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/services/land-surveying-services"
+                  className="text-sm text-gray-400 hover:text-yellow-500 transition-colors"
+                >
+                  Land Surveying
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/architectural-design-services"
+                  className="text-sm text-gray-400 hover:text-yellow-500 transition-colors"
+                >
+                  Architectural Design
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/integrated-survey-design-packages"
+                  className="text-sm text-gray-400 hover:text-yellow-500 transition-colors"
+                >
+                  Integrated Solutions
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-yellow-500">
+              Contact
+            </h4>
+            <address className="not-italic text-sm text-gray-400 space-y-2">
+              <p>123 Fake Street</p>
+              <p>Freetown, Sierra Leone</p>
+              <p>Email: info@regalengineering.com</p>
+              <p>Phone: +232 76 000 000</p>
+            </address>
           </div>
         </div>
-        <div className="mt-8 text-center text-sm">
-          © {new Date().getFullYear()} EngiTech Solutions. All rights reserved.
-          Developed by JOKA.
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-800">
+        <div className="container mx-auto px-6 py-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="text-sm text-gray-400">
+              © {new Date().getFullYear()} Regal Engineering & Design Solutions.
+              All rights reserved.
+            </div>
+
+            {/* Social Links */}
+            <div className="flex items-center space-x-4">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-yellow-500 transition-colors"
+              >
+                <Twitter className="h-5 w-5" />
+                <span className="sr-only">Twitter</span>
+              </a>
+              <a
+                href="#"
+                className="text-gray-400 hover:text-yellow-500 transition-colors"
+              >
+                <Facebook className="h-5 w-5" />
+                <span className="sr-only">Facebook</span>
+              </a>
+              <a
+                href="#"
+                className="text-gray-400 hover:text-yellow-500 transition-colors"
+              >
+                <Linkedin className="h-5 w-5" />
+                <span className="sr-only">LinkedIn</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

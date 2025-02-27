@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,89 +13,66 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-background shadow-md">
-      <nav className="container mx-auto px-6 py-3">
+    <header className="bg-white/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
+      <nav className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <div className="text-xl font-bold font-heading text-foreground">
-            EngiTech Solutions
-          </div>
-
-          <div className="flex items-center space-x-2">
-            <ThemeToggle />
-            {/* Mobile menu button */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="md:hidden"
-              onClick={toggleMenu}
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </Button>
-          </div>
+          <Link
+            href="/"
+            className="text-xl font-bold font-heading bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent"
+          >
+            Regal Engineering & Design Solutions
+          </Link>
 
           {/* Desktop menu */}
-          <div className="hidden md:flex space-x-4">
-            <Link href="/" className="text-foreground hover:text-secondary">
-              Home
-            </Link>
-            <Link
-              href="/services"
-              className="text-foreground hover:text-secondary"
-            >
-              Services
-            </Link>
-            <Link
-              href="/about"
-              className="text-foreground hover:text-secondary"
-            >
-              About
-            </Link>
-            <Link href="/team" className="text-foreground hover:text-secondary">
-              Team
-            </Link>
-            <Link
-              href="/#contact"
-              className="text-foreground hover:text-secondary"
-            >
-              Contact
-            </Link>
+          <div className="hidden md:flex items-center space-x-8">
+            {["Home", "Services", "About", "Team", "Contact"].map((item) => (
+              <Link
+                key={item}
+                href={
+                  item === "Home"
+                    ? "/"
+                    : item === "Contact"
+                    ? "/#contact"
+                    : `/${item.toLowerCase()}`
+                }
+                className="text-gray-600 hover:text-yellow-600 transition-colors duration-200 text-sm font-medium"
+              >
+                {item}
+              </Link>
+            ))}
           </div>
+
+          {/* Mobile menu button */}
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden"
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </Button>
         </div>
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 space-y-2">
-            <Link
-              href="/"
-              className="block text-foreground hover:text-secondary"
-            >
-              Home
-            </Link>
-            <Link
-              href="/services"
-              className="block text-foreground hover:text-secondary"
-            >
-              Services
-            </Link>
-            <Link
-              href="/about"
-              className="block text-foreground hover:text-secondary"
-            >
-              About
-            </Link>
-            <Link
-              href="/team"
-              className="block text-foreground hover:text-secondary"
-            >
-              Team
-            </Link>
-            <Link
-              href="/#contact"
-              className="block text-foreground hover:text-secondary"
-            >
-              Contact
-            </Link>
+          <div className="md:hidden mt-4 pb-4 space-y-4">
+            {["Home", "Services", "About", "Team", "Contact"].map((item) => (
+              <Link
+                key={item}
+                href={
+                  item === "Home"
+                    ? "/"
+                    : item === "Contact"
+                    ? "/#contact"
+                    : `/${item.toLowerCase()}`
+                }
+                className="block text-gray-600 hover:text-yellow-600 transition-colors duration-200 text-sm font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item}
+              </Link>
+            ))}
           </div>
         )}
       </nav>

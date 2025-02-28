@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Montserrat, Roboto } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
+// import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import type React from "react";
@@ -35,12 +35,12 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${montserrat.variable} ${roboto.variable} font-sans`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        {/* <ThemeProvider attribute="class" defaultTheme="system" enableSystem> */}
           <Header />
           {children}
           <ClientToaster /> {/* Render the client component here */}
           <Footer />
-        </ThemeProvider>
+        {/* </ThemeProvider> */}
         <Analytics />
       </body>
     </html>

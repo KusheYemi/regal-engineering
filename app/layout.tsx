@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import type React from "react";
 import ClientToaster from "@/components/ClientToaster"; 
+import { Analytics } from "@vercel/analytics/react";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -40,6 +41,7 @@ export default function RootLayout({
           <ClientToaster /> {/* Render the client component here */}
           <Footer />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

@@ -19,7 +19,7 @@ const servicesData = {
     title: "Integrated Survey & Design Packages",
     description: "Seamless solutions from land assessment to design.",
     details: `Experience the efficiency of a seamless development process with our integrated survey and design packages. This comprehensive service combines the accuracy of our land surveying expertise with the creative prowess of our architectural design team, providing a one-stop solution for property development. Ideal for residential and commercial projects, land subdivision, and feasibility studies, our bundled offerings are designed to reduce timelines, lower costs, and simplify project management. By integrating precise surveying data with innovative design strategies, we deliver cohesive, forward-thinking solutions that set the foundation for successful, sustainable development.`,
-    image: "../images/achitectural-design.jpg",
+    image: "../images/designx.jpg",
   },
 };
 

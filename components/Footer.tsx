@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Facebook, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -10,10 +10,10 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <Link href="/" className="block">
-              <h3 className="text-xl font-bold text-yellow-500">
-                Regal Engineering
+              <h3 className="text-xl font-bold text-yellow-600">
+                Regal Engineering & Design Solutions
               </h3>
-              <span className="text-sm text-gray-400">& Design Solutions</span>
+              {/* <span className="text-sm text-gray-400">& Design Solutions</span> */}
             </Link>
             <p className="text-sm text-gray-400 pr-4">
               Precision. Innovation. Shaping Visions into Reality.
@@ -22,14 +22,18 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-yellow-500">
+            <h4 className="text-lg font-semibold mb-4 text-yellow-600">
               Quick Links
             </h4>
             <ul className="space-y-2">
               {["About", "Services", "Team", "Contact"].map((item) => (
                 <li key={item}>
                   <Link
-                    href={`/${item.toLowerCase()}`}
+                    href={
+                      item === "Contact"
+                        ? "/#contact"
+                        : `/${item.toLowerCase()}`
+                    }
                     className="text-sm text-gray-400 hover:text-yellow-500 transition-colors"
                   >
                     {item}
@@ -41,7 +45,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-yellow-500">
+            <h4 className="text-lg font-semibold mb-4 text-yellow-600">
               Services
             </h4>
             <ul className="space-y-2">
@@ -74,7 +78,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-yellow-500">
+            <h4 className="text-lg font-semibold mb-4 text-yellow-600">
               Contact
             </h4>
             <address className="not-italic text-sm text-gray-400 space-y-2">
@@ -93,7 +97,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-sm text-gray-400">
               © {new Date().getFullYear()} Regal Engineering & Design Solutions.
-              All rights reserved.
+              All rights reserved. Designed and developed by Joel Anthony.
             </div>
 
             {/* Social Links */}
@@ -118,6 +122,13 @@ export default function Footer() {
               >
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
+              </a>
+              <a
+                href="#"
+                className="text-gray-400 hover:text-yellow-500 transition-colors"
+              >
+                <Instagram className="h-5 w-5" />
+                <span className="sr-only">Instagram</span>
               </a>
             </div>
           </div>

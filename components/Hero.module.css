@@ -1,0 +1,14 @@
+.heroBackground {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('/images/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Fallback styles */
+@media (max-width: 640px) {
+    .heroBackground {
+        background-position: center center;
+    }
+}

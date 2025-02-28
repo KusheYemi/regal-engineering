@@ -12,16 +12,19 @@ export default function Services() {
       title: "Land Surveying Services",
       description:
         "Precision boundary surveys, topographic mapping, and legal land descriptions.",
+      slug: "land-surveying-services",
     },
     {
       title: "Architectural Design Services",
       description:
         "Conceptual designs, 3D renderings, and detailed floor and site plans.",
+      slug: "architectural-design-services",
     },
     {
       title: "Integrated Survey & Design Packages",
       description:
         "Seamless land surveying and architectural solutions for property development.",
+      slug: "integrated-survey-design-packages",
     },
   ];
 
@@ -34,19 +37,22 @@ export default function Services() {
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card
+              <Link
                 key={index}
-                className="flex flex-col bg-white rounded-lg shadow-md transform transition duration-300 hover:-translate-y-2 hover:shadow-xl cursor-pointer"
+                href={`/services/${service.slug}`}
+                className="block transform transition duration-300 hover:-translate-y-2"
               >
-                <CardHeader className="border-b border-gray-200 bg-gray-50 p-4 border-l-4 border-yellow-500">
-                  <CardTitle className="text-xl font-semibold text-gray-800">
-                    {service.title}
-                  </CardTitle>
-                  <CardDescription className="text-gray-600">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-              </Card>
+                <Card className="flex flex-col bg-white rounded-lg shadow-md hover:shadow-xl cursor-pointer h-full">
+                  <CardHeader className="border-b border-gray-200 bg-gray-50 p-4 border-l-4 border-yellow-500">
+                    <CardTitle className="text-xl font-semibold text-gray-800">
+                      {service.title}
+                    </CardTitle>
+                    <CardDescription className="text-gray-600">
+                      {service.description}
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>

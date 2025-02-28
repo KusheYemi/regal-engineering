@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import type React from "react";
-import ClientToaster from "@/components/clientToaster"; // Import the new client component
+import ClientToaster from "@/components/ClientToaster"; 
 
 const montserrat = Montserrat({
   subsets: ["latin"],

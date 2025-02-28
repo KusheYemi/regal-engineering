@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Card,
@@ -14,24 +15,28 @@ export default function TeamPage() {
       role: "CEO & Software Engineer",
       image: "/placeholder.svg?height=300&width=300",
       bio: "Jane has over 15 years of experience in software engineering and has led multiple successful startups. She's passionate about using technology to solve real-world problems.",
+      slug: "jane-doe",
     },
     {
       name: "John Smith",
       role: "CTO & Mechanical Engineer",
       image: "/placeholder.svg?height=300&width=300",
       bio: "John is an expert in mechanical engineering with a focus on sustainable design. He's been instrumental in developing our eco-friendly product line.",
+      slug: "john-smith",
     },
     {
       name: "Alice Johnson",
       role: "Lead Electrical Engineer",
       image: "/placeholder.svg?height=300&width=300",
       bio: "Alice specializes in power systems and IoT devices. Her innovative designs have revolutionized our approach to smart home technology.",
+      slug: "alice-johnson",
     },
     {
       name: "Bob Williams",
       role: "Head of Robotics",
       image: "/placeholder.svg?height=300&width=300",
       bio: "Bob's expertise lies in AI and robotics. He leads our robotics division, developing cutting-edge solutions for industrial automation.",
+      slug: "bob-williams",
     },
   ];
 
@@ -44,33 +49,32 @@ export default function TeamPage() {
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member, index) => (
-              <Card
-                key={index}
-                className="transition transform hover:-translate-y-2 hover:shadow-2xl"
-              >
-                <CardHeader className="flex items-center gap-4 p-4 border-l-4 border-yellow-500">
-                  <Avatar className="w-20 h-20">
-                    <AvatarImage src={member.image} alt={member.name} />
-                    <AvatarFallback>
-                      {member.name
-                        .split(" ")
-                        .map((n) => n[0])
-                        .join("")}
-                    </AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <CardTitle className="text-xl font-semibold text-gray-800">
-                      {member.name}
-                    </CardTitle>
-                    <CardDescription className="text-gray-600">
-                      {member.role}
-                    </CardDescription>
-                  </div>
-                </CardHeader>
-                <CardContent className="p-4">
-                  <p className="text-gray-600">{member.bio}</p>
-                </CardContent>
-              </Card>
+              <Link key={index} href={`/team/${member.slug}`}>
+                <Card className="transition transform hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
+                  <CardHeader className="flex items-center gap-4 p-4 border-l-4 border-yellow-500">
+                    <Avatar className="w-20 h-20">
+                      <AvatarImage src={member.image} alt={member.name} />
+                      <AvatarFallback>
+                        {member.name
+                          .split(" ")
+                          .map((n) => n[0])
+                          .join("")}
+                      </AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <CardTitle className="text-xl font-semibold text-gray-800">
+                        {member.name}
+                      </CardTitle>
+                      <CardDescription className="text-gray-600">
+                        {member.role}
+                      </CardDescription>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="p-4">
+                    <p className="text-gray-600">{member.bio}</p>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>

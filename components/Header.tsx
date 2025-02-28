@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+// import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -16,11 +17,18 @@ export default function Header() {
     <header className="bg-white/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <Link
-            href="/"
-            className="text-xl font-bold font-heading bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent"
-          >
-            Regal Engineering & Design Solutions
+          <Link href="/" className="flex items-center">
+            {/* <Image
+              src="/images/regal.png"
+              alt="Regal Engineering Logo"
+              width={150}
+              height={50}
+              className="h-auto w-auto"
+              priority
+            /> */}
+            <span className="text-xl font-bold font-heading bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent">
+              Regal Engineering & Design Solutions
+            </span>
           </Link>
 
           {/* Desktop menu */}

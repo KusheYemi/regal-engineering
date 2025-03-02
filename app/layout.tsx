@@ -5,8 +5,9 @@ import { Montserrat, Roboto } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import type React from "react";
-import ClientToaster from "@/components/ClientToaster"; 
+import ClientToaster from "@/components/ClientToaster";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -36,12 +37,13 @@ export default function RootLayout({
         className={`${montserrat.variable} ${roboto.variable} font-sans`}
       >
         {/* <ThemeProvider attribute="class" defaultTheme="system" enableSystem> */}
-          <Header />
-          {children}
-          <ClientToaster /> {/* Render the client component here */}
-          <Footer />
+        <Header />
+        {children}
+        <ClientToaster /> {/* Render the client component here */}
+        <Footer />
         {/* </ThemeProvider> */}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

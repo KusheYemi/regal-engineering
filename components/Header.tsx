@@ -33,21 +33,23 @@ export default function Header() {
 
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-8">
-            {["Home", "Services", "About", "Team", "Contact"].map((item) => (
-              <Link
-                key={item}
-                href={
-                  item === "Home"
-                    ? "/"
-                    : item === "Contact"
-                    ? "/#contact"
-                    : `/${item.toLowerCase()}`
-                }
-                className="text-gray-600 hover:text-yellow-600 transition-colors duration-200 text-sm font-medium"
-              >
-                {item}
-              </Link>
-            ))}
+            {["Home", "Services", "About", "Team", "Projects", "Contact"].map(
+              (item) => (
+                <Link
+                  key={item}
+                  href={
+                    item === "Home"
+                      ? "/"
+                      : item === "Contact"
+                      ? "/#contact"
+                      : `/${item.toLowerCase()}`
+                  }
+                  className="text-gray-600 hover:text-yellow-600 transition-colors duration-200 text-sm font-medium"
+                >
+                  {item}
+                </Link>
+              )
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -65,22 +67,24 @@ export default function Header() {
         {/* Mobile menu */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-4">
-            {["Home", "Services", "About", "Team", "Contact"].map((item) => (
-              <Link
-                key={item}
-                href={
-                  item === "Home"
-                    ? "/"
-                    : item === "Contact"
-                    ? "/#contact"
-                    : `/${item.toLowerCase()}`
-                }
-                className="block text-gray-600 hover:text-yellow-600 transition-colors duration-200 text-sm font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item}
-              </Link>
-            ))}
+            {["Home", "Services", "About", "Team", "Projects", "Contact"].map(
+              (item) => (
+                <Link
+                  key={item}
+                  href={
+                    item === "Home"
+                      ? "/"
+                      : item === "Contact"
+                      ? "/#contact"
+                      : `/${item.toLowerCase()}`
+                  }
+                  className="block text-gray-600 hover:text-yellow-600 transition-colors duration-200 text-sm font-medium"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item}
+                </Link>
+              )
+            )}
           </div>
         )}
       </nav>

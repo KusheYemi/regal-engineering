@@ -41,8 +41,16 @@ export default function ServicesPage() {
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Link key={index} href={`/services/${service.slug}`}>
-              <Card className="bg-white border-gray-100 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-yellow-500/5 cursor-pointer">
+            <Link
+              key={index}
+              href={`/services/${service.slug}`}
+              className="h-full"
+            >
+              <Card
+                className="bg-white border-gray-100 transition-all duration-300 transform 
+                             hover:-translate-y-2 hover:shadow-xl hover:shadow-yellow-500/5 
+                             cursor-pointer h-full flex flex-col"
+              >
                 <CardHeader className="p-6 border-l-4 border-yellow-500">
                   <CardTitle className="text-xl font-semibold text-gray-800">
                     {service.title}
@@ -51,10 +59,13 @@ export default function ServicesPage() {
                     {service.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="p-6">
+                <CardContent className="p-6 flex-grow">
                   <p className="text-gray-600">
                     {service.details.substring(0, 100)}...
                   </p>
+                  <span className="text-yellow-600 text-sm mt-4 inline-block group-hover:underline">
+                    Learn more →
+                  </span>
                 </CardContent>
               </Card>
             </Link>

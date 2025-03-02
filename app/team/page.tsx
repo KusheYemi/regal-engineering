@@ -47,12 +47,19 @@ export default function TeamPage() {
           <h1 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent">
             Our Team
           </h1>
+          <p className="text-center text-gray-600 mb-8">
+            Click on a team member to learn more about their expertise
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member, index) => (
-              <Link key={index} href={`/team/${member.slug}`}>
-                <Card className="transition transform hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
+              <Link
+                key={index}
+                href={`/team/${member.slug}`}
+                className="h-full"
+              >
+                <Card className="group transition transform hover:-translate-y-2 hover:shadow-2xl cursor-pointer h-full flex flex-col">
                   <CardHeader className="flex items-center gap-4 p-4 border-l-4 border-yellow-500">
-                    <Avatar className="w-20 h-20">
+                    <Avatar className="w-20 h-20 flex-shrink-0">
                       <AvatarImage src={member.image} alt={member.name} />
                       <AvatarFallback>
                         {member.name
@@ -62,7 +69,7 @@ export default function TeamPage() {
                       </AvatarFallback>
                     </Avatar>
                     <div>
-                      <CardTitle className="text-xl font-semibold text-gray-800">
+                      <CardTitle className="text-xl font-semibold text-gray-800 group-hover:text-yellow-600 transition-colors">
                         {member.name}
                       </CardTitle>
                       <CardDescription className="text-gray-600">
@@ -70,8 +77,11 @@ export default function TeamPage() {
                       </CardDescription>
                     </div>
                   </CardHeader>
-                  <CardContent className="p-4">
+                  <CardContent className="p-4 flex-grow">
                     <p className="text-gray-600">{member.bio}</p>
+                    <span className="text-yellow-600 text-sm mt-4 inline-block group-hover:underline">
+                      Read more →
+                    </span>
                   </CardContent>
                 </Card>
               </Link>

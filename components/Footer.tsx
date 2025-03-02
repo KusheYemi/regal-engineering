@@ -26,20 +26,22 @@ export default function Footer() {
               Quick Links
             </h4>
             <ul className="space-y-2">
-              {["About", "Services", "Team", "Contact"].map((item) => (
-                <li key={item}>
-                  <Link
-                    href={
-                      item === "Contact"
-                        ? "/#contact"
-                        : `/${item.toLowerCase()}`
-                    }
-                    className="text-sm text-gray-400 hover:text-yellow-500 transition-colors"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              {["About", "Services", "Team", "Projects", "Contact"].map(
+                (item) => (
+                  <li key={item}>
+                    <Link
+                      href={
+                        item === "Contact"
+                          ? "/#contact"
+                          : `/${item.toLowerCase()}`
+                      }
+                      className="text-sm text-gray-400 hover:text-yellow-500 transition-colors"
+                    >
+                      {item}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </div>
 

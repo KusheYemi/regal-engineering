@@ -129,7 +129,7 @@ export default function Contact() {
                         href="mailto:info@example.com"
                         className="text-gray-600 hover:text-yellow-600 transition-colors"
                       >
-                        info@example.com
+                        kwamahl@gmail.com
                       </a>
                     </div>
                   </li>
@@ -143,7 +143,7 @@ export default function Contact() {
                         href="tel:+23276000000"
                         className="text-gray-600 hover:text-yellow-600 transition-colors"
                       >
-                        +232 76 000 000
+                        +232 99 889 654
                       </a>
                     </div>
                   </li>

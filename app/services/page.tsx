@@ -11,18 +11,16 @@ import Link from "next/link";
 export default function ServicesPage() {
   const services = [
     {
-      slug: "land-surveying-services",
-      title: "Land Surveying Services",
+      slug: "surveying-services",
+      title: "Surveying Services",
       description: "Precision surveys for informed property decisions.",
-      details:
-        "We provide high-accuracy land surveying services, including boundary and topographic surveys, construction staking, and legal land descriptions. Using advanced drone technology and GIS mapping, we ensure precise measurements for real estate development, urban planning, and construction projects.",
+      details: `At Regal Engineering & Design Solutions, precision is the cornerstone of every successful development. Our state-of-the-art land surveying services combine advanced drone technology, GIS mapping, and industry-standard tools like Autodesk Civil 3D to deliver high-accuracy boundary surveys, detailed topographic assessments, and precise construction staking. We also offer subdivision planning and legally sound land descriptions, ensuring every measurement meets the highest standards of precision and regulatory compliance. Driven by innovation and a commitment to integrity, we empower land buyers, sellers, and developers to make informed, confident decisions. At Regal Engineering, every project is executed with passion and an unwavering focus on quality, blending modern technology with deep industry expertise to provide solutions that are both innovative and practical. Whether you're launching a new development or enhancing an existing one, our comprehensive suite of engineering solutions is designed to lay the foundation for your success.`,
     },
     {
       slug: "architectural-design-services",
       title: "Architectural Design Services",
       description: "Innovative designs tailored to your vision.",
-      details:
-        "Our architectural team specializes in conceptual designs, 3D renderings, and detailed floor and site plans. Whether you're planning a residential, commercial, or mixed-use development, we bring creativity and technical expertise to every project, ensuring functionality and aesthetic appeal.",
+      details: `At Regal Engineering & Design Solutions, our architectural design services seamlessly blend creative vision with engineering excellence to transform ideas into inspiring, functional spaces. We provide a comprehensive range of solutions—from conceptual designs and immersive 3D renderings to meticulously detailed floor and site plans—that capture the essence of your vision. In close collaboration with experienced engineering firms, we develop robust structural layouts and permit drawings that streamline the approval process, ensuring that every design meets both aesthetic and practical standards. Our unwavering commitment to precision, innovation, and client satisfaction means that each project is executed with passion and an uncompromising focus on quality. Leveraging modern technology and deep industry expertise, we tailor our designs to meet the unique demands of residential, commercial, and mixed-use developments, creating spaces that are as striking as they are functional. Whether you're embarking on a new development or enhancing an existing one, let Regal Engineering & Design Solutions lay the foundation for your success with architectural services designed to deliver exceptional outcomes.`,
     },
     {
       slug: "integrated-survey-design-packages",

@@ -20,18 +20,19 @@ export default function About() {
             </h2>
             <p className="text-gray-600 mb-4">
               Regal Engineering & Design Solutions, a subsidiary of Regal
-              Affluent Holding LLC, is a leading land surveying and
-              architectural design company committed to precision, innovation,
-              and excellence. We provide integrated solutions for land buyers,
-              sellers, developers, and property owners in Sierra Leone, offering
-              services such as boundary and topographic surveys, conceptual
-              designs, 3D renderings, and permit drawings. Utilizing
-              cutting-edge drone technology and expert design capabilities, we
-              streamline the property acquisition and development process,
-              ensuring our clients make informed decisions. With a
-              client-centric approach and a commitment to integrity, we stand as
-              a trusted partner in real estate development, urban planning, and
-              construction, turning visions into reality.
+              Affluent Holding LLC, is a premier engineering and design firm
+              committed to precision, innovation, and excellence. We deliver
+              integrated solutions to land buyers, sellers, developers, and
+              property owners throughout Sierra Leone, offering services that
+              include accurate boundary and topographic surveys, conceptual
+              designs, immersive 3D renderings, and permit drawings. By
+              leveraging cutting-edge technology alongside expert design
+              capabilities, we streamline the property acquisition and
+              development process, ensuring our clients can make informed and
+              confident decisions. With a client-centric approach and an
+              unwavering commitment to integrity, we stand as a trusted partner
+              in real estate development, urban planning, and
+              construction—turning visions into reality.
             </p>
             {/* <p className="text-gray-600 mb-4">
               Founded in 2023, we&apos;ve quickly established ourselves as

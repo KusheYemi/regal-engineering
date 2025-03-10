@@ -3,22 +3,24 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 
 const servicesData = {
-  "land-surveying-services": {
-    title: "Land Surveying Services",
+  "surveying-services": {
+    title: "Surveying Services",
     description: "Precision surveys for informed property decisions.",
-    details: `At Regal Engineering & Design Solutions, our land surveying services are the cornerstone of every successful development project. We deliver precise, high-accuracy boundary surveys, detailed topographic surveys, and construction staking using advanced drone technology and GIS mapping. Our offerings extend to subdivision planning and legally sound land descriptions, ensuring that every measurement and delineation meets the highest standards of precision and regulatory compliance. By combining innovative techniques with a commitment to integrity and client-centric solutions, we empower land buyers, sellers, and developers to make informed, confident decisions.`,
+    details: `At Regal Engineering & Design Solutions, precision is the cornerstone of every successful development. Our state-of-the-art land surveying services combine advanced drone technology, GIS mapping, and industry-standard tools like Autodesk Civil 3D to deliver high-accuracy boundary surveys, detailed topographic assessments, and precise construction staking. We also offer subdivision planning and legally sound land descriptions, ensuring every measurement meets the highest standards of precision and regulatory compliance.\n\n
+              Driven by innovation and a commitment to integrity, we empower land buyers, sellers, and developers to make informed, confident decisions. At Regal Engineering, every project is executed with passion and an unwavering focus on quality, blending modern technology with deep industry expertise to provide solutions that are both innovative and practical.\n\n
+              Whether you're launching a new development or enhancing an existing one, our comprehensive suite of engineering solutions is designed to lay the foundation for your success.`,
     image: "../images/land-survey.jpg",
   },
   "architectural-design-services": {
     title: "Architectural Design Services",
     description: "Innovative designs tailored to your vision.",
-    details: `Our architectural design services merge creative vision with engineering excellence to transform ideas into inspiring, functional spaces. We offer comprehensive solutions including conceptual designs, immersive 3D renderings, and meticulous floor and site plans that capture the essence of your vision. In partnership with experienced engineering firms, we provide robust structural layouts and permit drawings that streamline the approval process. Focused on precision, innovation, and client satisfaction, our designs are tailored to meet the unique demands of residential, commercial, and mixed-use developments, ensuring each project is both aesthetically striking and practically sound.`,
+    details: `At Regal Engineering & Design Solutions, our architectural design services seamlessly blend creative vision with engineering excellence to transform ideas into inspiring, functional spaces. We provide a comprehensive range of solutions—from conceptual designs and immersive 3D renderings to meticulously detailed floor and site plans—that capture the essence of your vision.\n\nIn close collaboration with experienced engineering firms, we develop robust structural layouts and permit drawings that streamline the approval process, ensuring that every design meets both aesthetic and practical standards.\n\nOur unwavering commitment to precision, innovation, and client satisfaction means that each project is executed with passion and an uncompromising focus on quality. Leveraging modern technology and deep industry expertise, we tailor our designs to meet the unique demands of residential, commercial, and mixed-use developments, creating spaces that are as striking as they are functional.`,
     image: "../images/architect-design.jpg",
   },
   "integrated-survey-design-packages": {
     title: "Integrated Survey & Design Packages",
     description: "Seamless solutions from land assessment to design.",
-    details: `Experience the efficiency of a seamless development process with our integrated survey and design packages. This comprehensive service combines the accuracy of our land surveying expertise with the creative prowess of our architectural design team, providing a one-stop solution for property development. Ideal for residential and commercial projects, land subdivision, and feasibility studies, our bundled offerings are designed to reduce timelines, lower costs, and simplify project management. By integrating precise surveying data with innovative design strategies, we deliver cohesive, forward-thinking solutions that set the foundation for successful, sustainable development.`,
+    details: `Experience the efficiency of a seamless development process with our integrated survey and design packages. This comprehensive service combines the accuracy of our land surveying expertise with the creative prowess of our architectural design team, providing a one-stop solution for property development.\n\nIdeal for residential and commercial projects, land subdivision, and feasibility studies, our bundled offerings are designed to reduce timelines, lower costs, and simplify project management. By integrating precise surveying data with innovative design strategies, we deliver cohesive, forward-thinking solutions that set the foundation for successful, sustainable development.`,
     image: "../images/designx.jpg",
   },
 };
@@ -61,7 +63,11 @@ export default function ServicePage() {
       {/* Service Details */}
       <section className="container mx-auto px-6 py-20">
         <div className="max-w-3xl mx-auto prose prose-lg">
-          <p className="text-gray-700 leading-relaxed">{service.details}</p>
+          {service.details.split("\n\n").map((paragraph, index) => (
+            <p key={index} className="text-gray-700 leading-relaxed">
+              {paragraph.trim()}
+            </p>
+          ))}
           <p className="text-gray-700 leading-relaxed">
             At Regal Engineering, our commitment to excellence means every
             project is executed with precision, passion, and an unwavering focus

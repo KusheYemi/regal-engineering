@@ -86,8 +86,8 @@ export default function Footer() {
             <address className="not-italic text-sm text-gray-400 space-y-2">
               <p>123 Fake Street</p>
               <p>Freetown, Sierra Leone</p>
-              <p>Email: info@regalengineering.com</p>
-              <p>Phone: +232 76 000 000</p>
+              <p>Email: kwamahl@gmail.com</p>
+              <p>Phone: +232 99 889 654</p>
             </address>
           </div>
         </div>

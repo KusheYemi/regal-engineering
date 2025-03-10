@@ -57,32 +57,20 @@ export default function AboutPage() {
             </div>
             <div className="md:w-1/2 space-y-6">
               <p className="text-gray-600 leading-relaxed">
-                Regal Engineering & Design Solutions is an emerging land
-                surveying and architectural design startup committed to
-                precision, innovation, and excellence. We simplify the property
-                acquisition and development process by offering integrated
-                solutions tailored to land buyers, sellers, and developers.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                Founded in Sierra Leone, we leverage advanced drone technology
-                and expert design capabilities to provide high-accuracy land
-                surveys and premium architectural designs. Our mission is to
-                deliver reliable, data-driven insights and creative solutions
-                that empower our clients to make informed real estate and
-                development decisions.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                At Regal Engineering & Design Solutions, we believe in a
-                holistic approach to property development. By merging land
-                surveying with architectural design, we ensure a seamless
-                experience that enhances efficiency and project success for
-                individuals, businesses, and municipalities alike.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                Our commitment to integrity, innovation, and client satisfaction
-                drives everything we do. We&apos;re not just measuring
-                land—we&apos;re shaping the future of real estate and
-                construction in Sierra Leone.
+                Regal Engineering & Design Solutions, a subsidiary of Regal
+                Affluent Holding LLC, is a premier engineering and design firm
+                committed to precision, innovation, and excellence. We deliver
+                integrated solutions to land buyers, sellers, developers, and
+                property owners throughout Sierra Leone, offering services that
+                include accurate boundary and topographic surveys, conceptual
+                designs, immersive 3D renderings, and permit drawings. By
+                leveraging cutting-edge technology alongside expert design
+                capabilities, we streamline the property acquisition and
+                development process, ensuring our clients can make informed and
+                confident decisions. With a client-centric approach and an
+                unwavering commitment to integrity, we stand as a trusted
+                partner in real estate development, urban planning, and
+                construction—turning visions into reality.
               </p>
             </div>
           </div>

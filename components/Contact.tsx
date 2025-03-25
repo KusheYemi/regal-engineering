@@ -69,13 +69,20 @@ export default function Contact() {
                     className="p-4 bg-gray-50 border-gray-200 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
                   />
                   <Input
-                    name="email"
-                    type="email"
-                    placeholder="Your Email"
-                    required
+                    name="phone"
+                    type="tel"
+                    placeholder="Your Phone Number"
+                    pattern="[0-9+\-\s]+"
                     className="p-4 bg-gray-50 border-gray-200 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
                   />
                 </div>
+                <Input
+                  name="email"
+                  type="email"
+                  placeholder="Your Email"
+                  required
+                  className="p-4 bg-gray-50 border-gray-200 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
+                />
                 <Input
                   name="subject"
                   type="text"

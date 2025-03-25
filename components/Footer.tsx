@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
 
 export default function Footer() {
@@ -10,9 +11,16 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <Link href="/" className="block">
-              <h3 className="text-xl font-bold text-yellow-600">
-                Regal Engineering & Design Solutions
-              </h3>
+              {/* <h3 className="text-xl font-bold text-yellow-600">
+                Regal Engineering & Design Solutions</h3> */}
+              <Image
+                src="/images/regal-logo.jpg"
+                alt="Regal Engineering & Design Solutions"
+                width={150}
+                height={150}
+                className="h-25 w-auto"
+              />
+
               {/* <span className="text-sm text-gray-400">& Design Solutions</span> */}
             </Link>
             <p className="text-sm text-gray-400 pr-4">
@@ -84,7 +92,7 @@ export default function Footer() {
               Contact
             </h4>
             <address className="not-italic text-sm text-gray-400 space-y-2">
-              <p>123 Fake Street</p>
+              <p>Onomake Drive, Motheim, Grafton</p>
               <p>Freetown, Sierra Leone</p>
               <p>Email: kwamahl@gmail.com</p>
               <p>Phone: +232 99 889 654</p>

@@ -115,7 +115,7 @@ export default function Contact() {
                     <div>
                       <p className="font-medium text-gray-800">Our Location</p>
                       <p className="text-gray-600">
-                        123 Fake Street, Freetown, Sierra Leone
+                        Onomake Drive, Motheim, Grafton, Freetown, Sierra Leone
                       </p>
                     </div>
                   </li>
